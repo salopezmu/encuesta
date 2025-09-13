@@ -8,14 +8,21 @@ class encuesta:
     
     #metodos
     def respuestas(self):
-        nombre=input("ingresa tu nombre\n")
-        carrera=input("ingresa tu carrera\n")
-        respuestaIdeas=int(input("cuantas ideas tienes para tu proyecto?(ingrese un numero natural para la cantidad)\n"))
-        for i in range(0,respuestaIdeas):
-            ideasProyecto=[]
-            ideasProy=input("cual(es) idea(s) tienes para tu proyecto?\n")
-            ideasProyecto.append(ideasProy)
-            print(f"la persona {nombre} de la carrera {carrera} tiene {respuestaIdeas} idea(s) de proyecto: {ideasProyecto}")
+        name=[]
+        carreer=[]
+        librery=[]
+        proyectIdeas=[]
+        for i in range(0,10):
+            nombre=input("ingresa tu nombre\n")
+            name.append(nombre)
+            carrera=input("ingresa tu carrera\n")
+            carreer.append(carrera)
+            librerias=input("conoces librerias de python?(si si esscribe las que conozcas separadas por un espacio, sino escribe ninguno\n")
+            librery.append(librerias)
+            ideasProy=input("cual idea tienes para tu proyecto?\n")
+            proyectIdeas.append(ideasProy)
+            print(f"la persona {name[i]} de la carrera {carreer[i]} conoce {librery[i]} librerias de python para conseguir su proyecto de: {proyectIdeas[i]}")
+        print(f"librerias para cada variable:\nnombres:{name}\ncarreras:{carreer}\nlibrerias:{librery}\nideas de proyecto:{proyectIdeas}")
 def main():
     encuesta.respuestas(encuesta)
 
