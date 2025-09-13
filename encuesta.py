@@ -15,8 +15,9 @@ class encuesta:
             ideasProyecto=[]
             ideasProy=input("cual(es) idea(s) tienes para tu proyecto?\n")
             ideasProyecto.append(ideasProy)
-        return nombre, carrera, respuestaIdeas, ideasProyecto
-    def imprimir(self,nombre,carrera,respuestaIdeas,ideasProyecto):
-        print(f"la persona {nombre} de la carrera {carrera} tiene la(s) siguente(s) {respuestaIdeas} idea(s) de proyecto: {ideasProyecto}")
+            print(f"la persona {nombre} de la carrera {carrera} tiene {respuestaIdeas} idea(s) de proyecto: {ideasProyecto}")
+def main():
+    encuesta.respuestas(encuesta)
 
-encuesta.respuestas(encuesta)
+if __name__=="__main__":
+    main()
